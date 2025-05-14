@@ -29,4 +29,4 @@ jobs:
         if: ${{ ! cancelled() }}
         with:
           name: ${{ env.FILE_DATE }}zerotier-tcp-relay.tar.gz
-          path: zerotier-planet-build.tar.gz
+          path: zerotier-tcp-relay.tar.gz
