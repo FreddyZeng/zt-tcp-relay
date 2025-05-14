@@ -6,7 +6,7 @@ RUN cargo build --release
 
 
 
-FROM debian:stretch-slim
+FROM debian:buster-slim
 
 COPY --from=builder /usr/src/zt-tcp-relay/target/release/zt-tcp-relay /app/zt-tcp-relay
 RUN chmod +x /app/zt-tcp-relay
