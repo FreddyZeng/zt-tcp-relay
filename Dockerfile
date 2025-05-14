@@ -1,4 +1,4 @@
-FROM rust:1.85-slim-stretch as builder
+FROM rust:1.85-slim as builder
 
 WORKDIR /usr/src/zt-tcp-relay
 COPY . .
