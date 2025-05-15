@@ -14,4 +14,4 @@ WORKDIR /app/
 
 ENV RUST_LOG=info
 
-CMD ["/app/zt-tcp-relay", "--listen", "0.0.0.0:443", "--max-conn", "8"]
+CMD ["/app/zt-tcp-relay", "--listen", "0.0.0.0:443", "--max-conn", "3000"]
