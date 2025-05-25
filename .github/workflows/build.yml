@@ -16,17 +16,17 @@ jobs:
       - name: Build Docker image
         run: |
           echo "FILE_DATE=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
-          docker build --network host . -f Dockerfile -t zerotier-tcp-relay
+          docker build --network host . -f Dockerfile -t zerotier-tcp-relay-build
 
 
       - name: Save Docker image
         run: |
-          docker save zerotier-tcp-relay \
-            | gzip > $GITHUB_WORKSPACE/zerotier-tcp-relay.tar.gz
+          docker save zerotier-tcp-relay-build \
+            | gzip > $GITHUB_WORKSPACE/zerotier-tcp-relay-build.tar.gz
 
       - name: Upload Docker image artifact
         uses: actions/upload-artifact@master
         if: ${{ ! cancelled() }}
         with:
-          name: ${{ env.FILE_DATE }}zerotier-tcp-relay.tar.gz
-          path: zerotier-tcp-relay.tar.gz
+          name: ${{ env.FILE_DATE }}zerotier-tcp-relay-build.tar.gz
+          path: zerotier-tcp-relay-build.tar.gz
