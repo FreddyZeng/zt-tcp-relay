@@ -11,3 +11,21 @@ env_logger = "0.11.6"
 clap = "2.33.3"
 zeromq = { git = "https://github.com/zeromq/zmq.rs.git", tag = "v0.4.1" }
 
+rmp = {
+  git     = "https://github.com/3Hren/msgpack-rust.git",
+  package = "rmp",
+  tag     = "rmpv/v1.3.0"
+}
+
+rmp-serde = {
+  git     = "https://github.com/3Hren/msgpack-rust.git",
+  package = "rmp-serde",
+  tag     = "rmpv/v1.3.0"
+}
+
+rmpv = {
+  git     = "https://github.com/3Hren/msgpack-rust.git",
+  package = "rmpv",
+  tag     = "rmpv/v1.3.0"
+}
+
