@@ -98,7 +98,8 @@ fn handle_tcp_connect(tcp_stream: TcpStream, conn_count: Arc<Mutex<u16>>, max_co
 fn read_greeting_packet(mut stream: TcpStream) -> Result<(), &'static str> {
     let peer_addr = stream.peer_addr().unwrap();
     // at first a client must send a greeting message
-    let mut buffer = [0; 9];
+    // let mut buffer = [0; 9];
+    let mut buffer = [0; 13];
     match stream.read_exact(&mut buffer) {
         Ok(_) => (),
         Err(e) => {
