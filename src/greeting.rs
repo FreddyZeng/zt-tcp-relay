@@ -19,7 +19,7 @@ pub fn validate_protocol(bytes: &[u8]) -> Result<(), &'static str> {
         return Err("Invalid protocol version");
     }
 
-    if &bytes[9..13] != &[0xA2, 0x6F, 0x29, 0xC8] {
+    if &bytes[9..13] != &[0x91, 0x5E, 0x18, 0xB7] {
         return Err("Invalid connect");
     }
 
